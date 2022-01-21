@@ -1,0 +1,63 @@
+.road {
+    width: 1000px;
+    height: 1000px;
+    background-image: url(./img/road.png);
+    position: absolute;
+}
+.car {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+@keyframes drift {
+    0% {
+        bottom: 100px;
+        left: 100px;
+    }
+    25% {
+        bottom: 100px;
+        left: 800px;
+        transform: rotate(0deg);
+    }
+    26% {
+        bottom: 100px;
+        left: 800px;
+        transform: rotate(-90deg);
+    }
+    50% {
+        bottom: 800px;
+        left: 800px;
+        transform: rotate(-90deg);
+    }
+    51% {
+        bottom: 800px;
+        left: 800px;
+        transform: rotate(-180deg);
+    }
+    75% {
+        bottom: 800px;
+        left: 100px;
+        transform: rotate(-180deg);
+    }
+    76% {
+        bottom: 800px;
+        left: 100px;
+        transform: rotate(-270deg);
+    }
+    99% {
+        bottom: 100px;
+        left: 100px;
+        transform: rotate(-270deg);
+    }
+    100% {
+        bottom: 100px;
+        left: 100px;
+        transform: rotate(-360deg);
+    }
+}
+.car {
+    animation-name: drift;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
